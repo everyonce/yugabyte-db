@@ -195,6 +195,7 @@ def check_for_local_changes():
         is_dirty = True
 
     if is_dirty:
-        prompt_input = raw_input("Continue [Y/n]: ").strip().lower()
-        if prompt_input not in ['y', 'yes', '']:
-            sys.exit(1)
+        logging.info("Using non-master data changes.  Do not use for release.")
+        # prompt_input = raw_input("Continue [Y/n]: ").strip().lower()
+        # if prompt_input not in ['y', 'yes', '']:
+            #sys.exit(1)
